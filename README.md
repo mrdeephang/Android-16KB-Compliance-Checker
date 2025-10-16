@@ -2,6 +2,10 @@
 
 Check if your Android app is ready for Google Play's **November 1, 2025** deadline.
 
+## Overview
+
+<img src="https://github.com/user-attachments/assets/10f6cc2a-8263-4237-801c-234eda09cf83" alt="Android 16KB Compliance" width="600">
+
 ---
 
 ## What's This About?
