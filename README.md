@@ -65,7 +65,7 @@ bash checkScript.sh build/app/outputs/flutter-apk/app-release.apk
 flutter build appbundle
 
 # Then check
-./checkScript.sh ./checkScript.sh build/app/outputs/bundle/release/app-release.aab
+./checkScript.sh build/app/outputs/bundle/release/app-release.aab
 ```
 
 **That's it.** The script will tell you if you're good to go or what needs fixing.
