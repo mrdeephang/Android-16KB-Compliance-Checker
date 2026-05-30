@@ -2,7 +2,7 @@
 
 # Enhanced ELF Alignment Checker for Android 16KB Page Size Compatibility
 # This script checks if your app's native libraries are compatible with 16KB page size devices
-# as required by Google Play starting November 1st, 2025 for apps targeting Android 15+
+# as required by Google Play for apps targeting Android 15+
 
 progname="${0##*/}"
 progname="${progname%.sh}"
@@ -246,7 +246,7 @@ usage() {
 
   echo -e "${BOLD}DESCRIPTION:${ENDCOLOR}"
   echo "  This tool verifies that your Android app's native libraries are compatible"
-  echo "  with 16KB page size devices, as required by Google Play starting November 1st, 2025."
+  echo "  with 16KB page size devices, as required by Google Play."
   echo
 
   echo -e "${BOLD}USAGE:${ENDCOLOR}"
@@ -348,7 +348,7 @@ check_dependencies
 print_banner "ANALYSIS IN PROGRESS" "Checking 16KB Page Size Compatibility"
 
 print_status "processing" "Target: $(basename "${dir}")"
-print_status "info" "Compliance Deadline: November 1st, 2025"
+print_status "info" "Compliance: Google Play Requirement"
 print_status "info" "Requirement: Apps targeting Android 15+ must support 16KB pages"
 
 # APK Processing
@@ -399,7 +399,7 @@ if [[ "${dir}" == *.apk ]]; then
       "" \
       "${CHECK_MARK} Apps without native libraries automatically support 16KB devices" \
       "${CHECK_MARK} No additional changes required for Google Play compliance" \
-      "${CHECK_MARK} You're all set for the November 1st, 2025 deadline!"
+      "${CHECK_MARK} You're all set for the Google Play requirement!"
     cleanup_trap 0
   fi
 
@@ -489,7 +489,7 @@ if [ -z "$matches" ]; then
     "" \
     "${CHECK_MARK} No native library alignment issues to worry about" \
     "${CHECK_MARK} Already compatible with 16KB page size devices" \
-    "${CHECK_MARK} Ready for Google Play's November 1st, 2025 requirement!"
+    "${CHECK_MARK} Ready for Google Play's requirement!"
   cleanup_trap 0
 fi
 
@@ -580,7 +580,7 @@ if [ ${#unaligned_libs[@]} -gt 0 ]; then
 
   summary_lines+=("")
   summary_lines+=("Google Play Compliance: FAILED")
-  summary_lines+=("Deadline: November 1st, 2025")
+  summary_lines+=("Requirement: Google Play Compliance")
 
   print_summary_box "COMPATIBILITY CHECK FAILED" "error" "${summary_lines[@]}"
 
@@ -668,7 +668,7 @@ if [ ${#unaligned_libs[@]} -gt 0 ]; then
 
   final_message=""
   if [ ${#critical_unaligned_libs[@]} -gt 0 ]; then
-    final_message="CRITICAL: Fix required for Google Play compliance by November 1st, 2025!"
+    final_message="CRITICAL: Fix required for Google Play compliance!"
   else
     final_message="Warning: Non-critical issues found - recommended to fix for complete compatibility"
   fi
@@ -694,7 +694,7 @@ else
     "  • All libraries: ${#aligned_libs[@]}/${total_libs} ALIGNED"
     ""
     "Google Play Compliance: PASSED ${CHECK_MARK}"
-    "Ready for November 1st, 2025 deadline!"
+    "Ready for Google Play compliance!"
   )
 
   print_summary_box "COMPATIBILITY CHECK PASSED" "success" "${summary_lines[@]}"
@@ -719,7 +719,7 @@ else
     "" \
     "${CHECK_MARK} All native libraries meet Google Play requirements" \
     "${CHECK_MARK} Ready for devices with 16KB page sizes" \
-    "${CHECK_MARK} Compliant with November 1st, 2025 deadline" \
+    "${CHECK_MARK} Compliant with Google Play requirement" \
     "" \
     "Recommendation: Test thoroughly on 16KB environment to ensure" \
     "no runtime issues exist in your application code."
@@ -733,7 +733,7 @@ echo
 
 # # Enhanced ELF Alignment Checker for Android 16KB Page Size Compatibility
 # # This script checks if your app's native libraries are compatible with 16KB page size devices
-# # as required by Google Play starting November 1st, 2025 for apps targeting Android 15+
+# # as required by Google Play for apps targeting Android 15+
 
 # progname="${0##*/}"
 # progname="${progname%.sh}"
@@ -977,7 +977,7 @@ echo
 
 #   echo -e "${BOLD}DESCRIPTION:${ENDCOLOR}"
 #   echo "  This tool verifies that your Android app's native libraries are compatible"
-#   echo "  with 16KB page size devices, as required by Google Play starting November 1st, 2025."
+#   echo "  with 16KB page size devices, as required by Google Play."
 #   echo
 
 #   echo -e "${BOLD}USAGE:${ENDCOLOR}"
@@ -1079,7 +1079,7 @@ echo
 # print_banner "ANALYSIS IN PROGRESS" "Checking 16KB Page Size Compatibility"
 
 # print_status "processing" "Target: $(basename "${dir}")"
-# print_status "info" "Compliance Deadline: November 1st, 2025"
+# print_status "info" "Compliance: Google Play Requirement"
 # print_status "info" "Requirement: Apps targeting Android 15+ must support 16KB pages"
 
 # # APK Processing
@@ -1130,7 +1130,7 @@ echo
 #       "" \
 #       "${CHECK_MARK} Apps without native libraries automatically support 16KB devices" \
 #       "${CHECK_MARK} No additional changes required for Google Play compliance" \
-#       "${CHECK_MARK} You're all set for the November 1st, 2025 deadline!"
+#       "${CHECK_MARK} You're all set for the Google Play requirement!"
 #     cleanup_trap 0
 #   fi
 
@@ -1189,7 +1189,7 @@ echo
 #     "" \
 #     "${CHECK_MARK} No native library alignment issues to worry about" \
 #     "${CHECK_MARK} Already compatible with 16KB page size devices" \
-#     "${CHECK_MARK} Ready for Google Play's November 1st, 2025 requirement!"
+#     "${CHECK_MARK} Ready for Google Play's requirement!"
 #   cleanup_trap 0
 # fi
 
@@ -1280,7 +1280,7 @@ echo
 
 #   summary_lines+=("")
 #   summary_lines+=("Google Play Compliance: FAILED")
-#   summary_lines+=("Deadline: November 1st, 2025")
+#   summary_lines+=("Requirement: Google Play Compliance")
 
 #   print_summary_box "COMPATIBILITY CHECK FAILED" "error" "${summary_lines[@]}"
 
@@ -1368,7 +1368,7 @@ echo
 
 #   final_message=""
 #   if [ ${#critical_unaligned_libs[@]} -gt 0 ]; then
-#     final_message="CRITICAL: Fix required for Google Play compliance by November 1st, 2025!"
+#     final_message="CRITICAL: Fix required for Google Play compliance!"
 #   else
 #     final_message="Warning: Non-critical issues found - recommended to fix for complete compatibility"
 #   fi
@@ -1394,7 +1394,7 @@ echo
 #     "  • All libraries: ${#aligned_libs[@]}/${total_libs} ALIGNED"
 #     ""
 #     "Google Play Compliance: PASSED ${CHECK_MARK}"
-#     "Ready for November 1st, 2025 deadline!"
+#     "Ready for Google Play compliance!"
 #   )
 
 #   print_summary_box "COMPATIBILITY CHECK PASSED" "success" "${summary_lines[@]}"
@@ -1419,7 +1419,7 @@ echo
 #     "" \
 #     "${CHECK_MARK} All native libraries meet Google Play requirements" \
 #     "${CHECK_MARK} Ready for devices with 16KB page sizes" \
-#     "${CHECK_MARK} Compliant with November 1st, 2025 deadline" \
+#     "${CHECK_MARK} Compliant with Google Play requirement" \
 #     "" \
 #     "Recommendation: Test thoroughly on 16KB environment to ensure" \
 #     "no runtime issues exist in your application code."
