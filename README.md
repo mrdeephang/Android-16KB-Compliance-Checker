@@ -10,7 +10,7 @@ Google requires all apps targeting Android 15+ (API level 35 or higher) that use
 
 ## What's This About?
 
-Starting November 1, 2025, all Android apps on Google Play **must support 16KB page sizes**. This script checks if your app is ready.
+Google requires all Android apps on Google Play to **support 16KB page sizes**. This script checks if your app is ready.
 
 ---
 
