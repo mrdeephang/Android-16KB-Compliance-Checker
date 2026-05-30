@@ -1,6 +1,6 @@
 # Android 16KB Page Size Compliance Checker
 
-Check if your Android app is ready for Google Play's **November 1, 2025** deadline.
+Google requires all apps targeting Android 15+ (API level 35 or higher) that use native C/C++ code to support 16 KB memory page sizes. Check if your Android app is compatible.
 
 ## Overview
 
@@ -70,4 +70,4 @@ flutter build appbundle
 
 **That's it.** The script will tell you if you're good to go or what needs fixing.
 
-**Deadline: November 1, 2025. Don't wait.**
+**Test Now. Don't wait.**
