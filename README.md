@@ -2,12 +2,6 @@
 
 Google requires all apps targeting Android 15+ (API level 35 or higher) that use native C/C++ code to support 16 KB memory page sizes. Check if your Android app is compatible.
 
-## Overview
-
-<img src="https://github.com/user-attachments/assets/10f6cc2a-8263-4237-801c-234eda09cf83" alt="Android 16KB Compliance" width="600">
-
----
-
 ## What's This About?
 
 Google requires all Android apps on Google Play to **support 16KB page sizes**. This script checks if your app is ready.
